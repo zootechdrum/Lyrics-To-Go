@@ -4,6 +4,7 @@ import { fetchLyrics } from "../actions";
 import Container from "react-bootstrap/Container";
 
 import SearchButton from "../Atoms/SearchButton";
+import LyricsContainer from "./LyricsContainer";
 
 export class Main extends Component {
   componentDidMount() {
@@ -17,6 +18,7 @@ export class Main extends Component {
           getLyrics={() => this.props.fetchLyrics()}
           text="Search Song"
         />
+        <LyricsContainer lyrics={this.props.lyrics} />
       </Container>
     );
   }
