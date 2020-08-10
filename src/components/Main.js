@@ -5,6 +5,16 @@ import Container from "react-bootstrap/Container";
 
 import SearchButton from "../Atoms/SearchButton";
 import LyricsContainer from "./LyricsContainer";
+import SearchForm from "./SearchForm";
+
+import landingImg from "../images/landing-image.svg";
+
+const styles = {
+  mainArea: {
+    textalign: "center",
+    width: "100%",
+  },
+};
 
 export class Main extends Component {
   componentDidMount() {
@@ -13,13 +23,14 @@ export class Main extends Component {
 
   render() {
     return (
-      <Container fluid>
+      <main className="main-area p-3 container">
+        <SearchForm />
         <SearchButton
-          getLyrics={() => this.props.fetchLyrics()}
+          getLyrics={() => this.props.fetchLyrics("Falling Away from Me")}
           text="Search Song"
         />
         <LyricsContainer lyrics={this.props.lyrics} />
-      </Container>
+      </main>
     );
   }
 }

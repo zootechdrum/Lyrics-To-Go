@@ -7,13 +7,11 @@ import "../styles/Footer.css";
 export default class Header extends Component {
   render() {
     return (
-      <Container fluid>
-        <footer className="text-center fixed-bottom white pt-3 font-small">
-          <a href="./index.html">
-            <img src={logoBlk} alt="logo for lyrics to go" id="bottom-logo" />
-          </a>
-        </footer>
-      </Container>
+      <footer className="text-center fixed-bottom white pt-3 font-small">
+        <a href="./index.html">
+          <img src={logoBlk} alt="logo for lyrics to go" id="bottom-logo" />
+        </a>
+      </footer>
     );
   }
 }

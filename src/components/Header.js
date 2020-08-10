@@ -7,13 +7,13 @@ import "../styles/Header.css";
 export default class Header extends Component {
   render() {
     return (
-      <Container fluid>
-        <header className="text-center">
+      <header className="text-center white">
+        <div>
           <a href="./index.html">
             <img src={logoBlk} alt="logo for lyrics to go" id="top-logo" />
           </a>
-        </header>
-      </Container>
+        </div>
+      </header>
     );
   }
 }
