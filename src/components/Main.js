@@ -1,9 +1,7 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import { fetchLyrics } from "../actions";
-import Container from "react-bootstrap/Container";
 
-import SearchButton from "../Atoms/SearchButton";
 import LyricsContainer from "./LyricsContainer";
 import SearchForm from "./SearchForm";
 
@@ -22,13 +20,11 @@ export class Main extends Component {
   }
 
   render() {
+    console.log(this.props);
     return (
       <main className="main-area p-3 container">
         <SearchForm />
-        <SearchButton
-          getLyrics={() => this.props.fetchLyrics("Falling Away from Me")}
-          text="Search Song"
-        />
+
         <LyricsContainer lyrics={this.props.lyrics} />
       </main>
     );

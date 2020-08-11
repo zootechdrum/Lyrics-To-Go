@@ -1,19 +1,32 @@
 import React, { Component } from "react";
-import { Form, Row, Col } from "react-bootstrap";
+import { connect } from "react-redux";
+import { Field } from "react-redux-form";
+import { fetchLyrics } from "../actions";
+import SearchButton from "../Atoms/SearchButton";
 
-export default class SearchForm extends Component {
+const handleSubmit = (event) => {
+  event.preventDefault();
+};
+
+export class SearchForm extends Component {
   render() {
+    console.log(this.props);
+    const { artist } = this.props;
     return (
-      <Form>
-        <Row>
-          <Col>
-            <Form.Control placeholder="First name" />
-          </Col>
-          <Col>
-            <Form.Control placeholder="Last name" />
-          </Col>
-        </Row>
-      </Form>
+      <form onSubmit={handleSubmit}>
+        <Field model="user.song">
+          <label>song</label>
+          <input type="text" />
+        </Field>
+        <SearchButton
+          getLyrics={() => this.props.fetchLyrics(artist.song)}
+          text="Search Song"
+        />
+      </form>
     );
   }
 }
+
+const mapStateToProps = (state) => ({ artist: state.user });
+
+export default connect(mapStateToProps, { fetchLyrics })(SearchForm);

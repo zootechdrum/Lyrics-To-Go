@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import Container from "react-bootstrap/Container";
 
 import logoBlk from "../images/logo-black.png";
 import "../styles/Footer.css";
