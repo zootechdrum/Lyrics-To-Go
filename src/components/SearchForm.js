@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import { Field } from "react-redux-form";
 import { fetchLyrics } from "../actions";
+import { displayImg } from "../actions";
 import SearchButton from "../Atoms/SearchButton";
 
 const handleSubmit = (event) => {
@@ -19,7 +20,10 @@ export class SearchForm extends Component {
           <input type="text" />
         </Field>
         <SearchButton
-          getLyrics={() => this.props.fetchLyrics(artist.song)}
+          getLyrics={() => {
+            this.props.fetchLyrics(artist.song);
+            this.props.displayImg(false);
+          }}
           text="Search Song"
         />
       </form>
@@ -29,4 +33,6 @@ export class SearchForm extends Component {
 
 const mapStateToProps = (state) => ({ artist: state.user });
 
-export default connect(mapStateToProps, { fetchLyrics })(SearchForm);
+export default connect(mapStateToProps, { fetchLyrics, displayImg })(
+  SearchForm
+);

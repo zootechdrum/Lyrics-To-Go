@@ -5,3 +5,10 @@ export const fetchLyrics = (song) => async (dispatch) => {
 
   dispatch({ type: "FETCH_LYRICS", payload: response.data.lyrics });
 };
+
+export const displayImg = (boo) => {
+  return {
+    type: "MAIN_CONT_IMG",
+    payload: !boo,
+  };
+};
