@@ -14,7 +14,10 @@ export class App extends Component {
   render() {
     console.log(this.props);
     return (
-      <Container className="main-search-background" fluid>
+      <Container
+        className={this.props.showImg ? "main-search-background" : ""}
+        fluid
+      >
         <Header />
         <Main />
         <Footer />

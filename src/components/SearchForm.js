@@ -22,7 +22,7 @@ export class SearchForm extends Component {
         <SearchButton
           getLyrics={() => {
             this.props.fetchLyrics(artist.song);
-            this.props.displayImg(false);
+            this.props.displayImg(true);
           }}
           text="Search Song"
         />
