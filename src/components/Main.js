@@ -7,7 +7,7 @@ import SearchForm from "./SearchForm";
 
 export class Main extends Component {
   componentDidMount() {
-    this.props.fetchLyrics();
+    this.props.fetchLyrics("Blind");
   }
 
   render() {
