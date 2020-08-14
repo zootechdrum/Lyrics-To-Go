@@ -11,11 +11,10 @@ const handleSubmit = (event) => {
 
 export class SearchForm extends Component {
   render() {
-    console.log(this.props);
     const { artist } = this.props;
     return (
       <form onSubmit={handleSubmit}>
-        <Field model="user.song">
+        <Field model="artist.song">
           <label>song</label>
           <input type="text" />
         </Field>
@@ -31,7 +30,7 @@ export class SearchForm extends Component {
   }
 }
 
-const mapStateToProps = (state) => ({ artist: state.user });
+const mapStateToProps = (state) => ({ artist: state.artist });
 
 export default connect(mapStateToProps, { fetchLyrics, displayImg })(
   SearchForm

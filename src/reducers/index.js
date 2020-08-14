@@ -8,6 +8,6 @@ export default combineReducers({
   showImg: showImg,
   form: formReducer,
   //This is for testing purposes
-  user: modelReducer("user"),
-  userForm: formReducer("user"),
+  artist: modelReducer("artist"),
+  artistForm: formReducer("artist"),
 });
