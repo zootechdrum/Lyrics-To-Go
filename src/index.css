@@ -6,10 +6,9 @@ body {
   height: 100vh;
 }
 
-#lyrics {
+.lyrics {
   overflow: auto;
   height: 300px;
-  display: none;
   text-align: left;
 }
 
