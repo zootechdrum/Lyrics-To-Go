@@ -16,10 +16,26 @@ export class SearchForm extends Component {
       <div className="row d-flex justify-content-center">
         <div clasName="col-md-8 col-sm-12"></div>
         <form className="md-form input-group white" onSubmit={handleSubmit}>
+          <div class="input-group-prepend">
+            <span class="input-group-text md-addon">artist & song title</span>
+          </div>
           <Field model="artist.song">
-            <label>song</label>
-            <input type="text" />
+            <input
+              type="text"
+              aria-label="artist"
+              id="artist"
+              class="form-control"
+              placeholder="artist here"
+            />
           </Field>
+          <input
+            type="text"
+            aria-label="song title"
+            id="title"
+            class="form-control"
+            placeholder="song title"
+          ></input>
+
           <SearchButton
             getLyrics={() => {
               this.props.fetchLyrics(artist.song);
