@@ -11,7 +11,11 @@ export default class LyricsContainer extends Component {
               " col-md-6 mb-3 lyrics ")
             }
           >
-            <p>{this.props.lyrics}</p>
+            <p
+              dangerouslySetInnerHTML={{
+                __html: this.props.lyrics,
+              }}
+            ></p>
           </div>
         </div>
       </div>

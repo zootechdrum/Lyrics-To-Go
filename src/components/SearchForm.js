@@ -28,7 +28,7 @@ export class SearchForm extends Component {
                 aria-label="artist"
                 id="artist"
                 class="form-control"
-                placeholder="artist here"
+                placeholder="Artist Song"
               />
             </Field>
             <Field model="artist.name">
@@ -37,7 +37,7 @@ export class SearchForm extends Component {
                 aria-label="song title"
                 id="title"
                 class="form-control"
-                placeholder="song title"
+                placeholder="Artist Name"
               ></input>
             </Field>
 
