@@ -22,16 +22,16 @@ export class SearchForm extends Component {
                 artist & song title
               </span>
             </div>
-            <Field model="artist.song">
+            <Field model="artist.name">
               <input
                 type="text"
                 aria-label="artist"
                 id="artist"
                 class="form-control"
-                placeholder="Artist Song"
+                placeholder="Artist Name"
               />
             </Field>
-            <Field model="artist.name">
+            <Field model="artist.Song">
               <input
                 type="text"
                 aria-label="song title"
