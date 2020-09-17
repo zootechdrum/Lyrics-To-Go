@@ -31,13 +31,13 @@ export class SearchForm extends Component {
                 placeholder="Artist Name"
               />
             </Field>
-            <Field model="artist.Song">
+            <Field model="artist.song">
               <input
                 type="text"
                 aria-label="song title"
                 id="title"
                 class="form-control"
-                placeholder="Artist Name"
+                placeholder="Artist song"
               ></input>
             </Field>
 
